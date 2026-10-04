@@ -44,7 +44,7 @@ export default function PersonaSection() {
           <div className="persona-visual-column">
             <div className="persona-photo-wrapper">
               <img 
-                src="/images/persona_girls.jpg" 
+                src={`${import.meta.env.BASE_URL}images/persona_girls.jpg`} 
                 alt="Target Persona Fashion Gen Z" 
                 className="persona-main-img" 
               />

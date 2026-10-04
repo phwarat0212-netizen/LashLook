@@ -17,6 +17,7 @@ export default function SmartQuizModal({ isOpen, onClose, onApplyStyle }) {
   };
 
   const getRecommendation = () => {
+    const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
     if (answers.makeupStyle === 'manga' || answers.eyeShape === 'hooded') {
       return {
         id: 'style1',
@@ -24,7 +25,7 @@ export default function SmartQuizModal({ isOpen, onClose, onApplyStyle }) {
         desc: 'จับช่อเส้นชัดสไตล์ไอดอลเกาหลี โคนหนา ปลายแหลมเรียว เปิดดวงตาให้ดูกลมโตและหวานละมุนอย่างโดดเด่น',
         matchScore: '98%',
         tag: 'Best For Manga Idol Look',
-        image: '/images/lashes/style1_upper_left.png'
+        image: `${base}images/lashes/style1_upper_left.png`
       };
     } else if (answers.makeupStyle === 'volume' || answers.occasion === 'event') {
       return {
@@ -33,7 +34,7 @@ export default function SmartQuizModal({ isOpen, onClose, onApplyStyle }) {
         desc: 'เส้นขนตาหนานุ่มหลายระดับ ไล่ระดับความยาวหางตา สวยเซ็กซี่ ทรงเสน่ห์ ถ่ายรูปขึ้นกล้องที่สุด',
         matchScore: '95%',
         tag: 'Best For Glam & Night Out',
-        image: '/images/lashes/style3_upper_left.png'
+        image: `${base}images/lashes/style3_upper_left.png`
       };
     } else {
       return {
@@ -42,7 +43,7 @@ export default function SmartQuizModal({ isOpen, onClose, onApplyStyle }) {
         desc: 'เส้นเรียงตัวเงางาม ดูชุ่มชื้นเป็นธรรมชาติ สไตล์ Clean Girl Makeup เหมาะกับทั้งวันทำงานและชีวิตประจำวัน',
         matchScore: '96%',
         tag: 'Best For Clean & Daily Natural',
-        image: '/images/lashes/style2_upper_left.png'
+        image: `${base}images/lashes/style2_upper_left.png`
       };
     }
   };

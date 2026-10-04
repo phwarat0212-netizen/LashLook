@@ -82,6 +82,8 @@ const createModelFaceLandmarks = () => {
   return pts;
 };
 
+const BASE_PATH = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
+
 // Module-level MediaPipe FaceMesh Singleton
 // Prevents Emscripten "RuntimeError: abort(Module.arguments has been replaced with plain arguments_)"
 let globalFaceMesh = null;
@@ -101,7 +103,7 @@ function getFaceMeshInstance() {
           }
 
           const fm = new window.FaceMesh({
-            locateFile: (file) => `/mediapipe/${file}`
+            locateFile: (file) => `${BASE_PATH}mediapipe/${file}`
           });
 
           fm.setOptions({
@@ -208,7 +210,7 @@ export default function CameraScanner({ onClose, initialStyleId = 'style1' }) {
       img.onload = () => {
         lashImagesRef.current[filename] = img;
       };
-      img.src = `/images/lashes/${filename}?v=6`;
+      img.src = `${BASE_PATH}images/lashes/${filename}?v=6`;
       if (img.complete) {
         lashImagesRef.current[filename] = img;
       }
@@ -455,7 +457,7 @@ export default function CameraScanner({ onClose, initialStyleId = 'style1' }) {
           .finally(() => { isProcessingRef.current = false; });
       }
     };
-    img.src = '/images/model-face.jpg';
+    img.src = `${BASE_PATH}images/model-face.jpg`;
     if (img.complete) {
       demoImageRef.current = img;
       if (faceMeshRef.current && !isProcessingRef.current) {
@@ -726,7 +728,7 @@ export default function CameraScanner({ onClose, initialStyleId = 'style1' }) {
     if (!img) {
       img = new Image();
       img.onload = () => { lashImagesRef.current[filename] = img; };
-      img.src = `/images/lashes/${filename}?v=6`;
+      img.src = `${BASE_PATH}images/lashes/${filename}?v=6`;
       lashImagesRef.current[filename] = img;
     }
 
@@ -737,7 +739,7 @@ export default function CameraScanner({ onClose, initialStyleId = 'style1' }) {
       if (!fallbackImg) {
         fallbackImg = new Image();
         fallbackImg.onload = () => { lashImagesRef.current[fallbackFile] = fallbackImg; };
-        fallbackImg.src = `/images/lashes/${fallbackFile}?v=6`;
+        fallbackImg.src = `${BASE_PATH}images/lashes/${fallbackFile}?v=6`;
         lashImagesRef.current[fallbackFile] = fallbackImg;
       }
       if (!fallbackImg.complete || fallbackImg.naturalWidth === 0) return;
