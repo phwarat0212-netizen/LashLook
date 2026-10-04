@@ -1,0 +1,244 @@
+.persona-full-section {
+  background-color: #EF8EB3;
+  min-height: calc(100vh - 64px);
+  padding: 36px 20px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.25s ease;
+}
+
+.dark-mode .persona-full-section {
+  background-color: #170d13;
+}
+
+.persona-container {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* Two-column Layout Card matching Image 4 */
+.persona-layout-card {
+  width: 100%;
+  background-color: #FFFFFF;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.08);
+  display: grid;
+  grid-template-columns: 440px 1fr;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.dark-mode .persona-layout-card {
+  background-color: #1e1119;
+  border-color: rgba(238, 107, 157, 0.2);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+/* Visual Column (Left) */
+.persona-visual-column {
+  position: relative;
+  background-color: #F8D2E1;
+  overflow: hidden;
+  display: flex;
+}
+
+.persona-photo-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 600px;
+}
+
+.persona-main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+.persona-cat-decor-top {
+  position: absolute;
+  top: 100px;
+  right: -8px;
+  z-index: 5;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+}
+
+/* Distressed Brush Title Overlay */
+.persona-brush-title-box {
+  position: absolute;
+  bottom: 30px;
+  left: 20px;
+  background-color: #0B0B0B;
+  padding: 10px 32px 12px;
+  transform: rotate(-3deg);
+  border-radius: 4px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  z-index: 6;
+  clip-path: polygon(
+    2% 8%, 98% 3%, 95% 88%, 99% 96%, 4% 94%, 0% 12%
+  );
+}
+
+.persona-brush-text {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 900;
+  font-size: 38px;
+  letter-spacing: 4px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 0px rgba(238, 107, 157, 0.5);
+}
+
+/* Info Column (Right) */
+.persona-info-column {
+  padding: 28px 36px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: #FFFFFF;
+}
+
+.dark-mode .persona-info-column {
+  background-color: #1e1119;
+}
+
+.persona-info-block {
+  background-color: #FFF6FA;
+  border-left: 4.5px solid #EE6B9D;
+  border-radius: 12px;
+  padding: 14px 18px;
+  transition: transform 0.15s ease;
+}
+
+.dark-mode .persona-info-block {
+  background-color: #271420;
+}
+
+.persona-info-block:hover {
+  transform: translateX(3px);
+}
+
+.persona-block-heading {
+  margin: 0 0 8px;
+  font-family: 'Prompt', sans-serif;
+  font-weight: 800;
+  font-size: 15.5px;
+  color: #0B0B0B;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dark-mode .persona-block-heading {
+  color: #FFFFFF;
+}
+
+.persona-bullet-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.persona-bullet-list li {
+  font-family: 'Prompt', sans-serif;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: #222222;
+}
+
+.dark-mode .persona-bullet-list li {
+  color: #E2CED8;
+}
+
+.bullet-label {
+  font-weight: 700;
+  color: #0B0B0B;
+  margin-right: 4px;
+}
+
+.dark-mode .bullet-label {
+  color: #FFFFFF;
+}
+
+/* Needs & Pains Split 2 Columns */
+.needs-pains-block {
+  position: relative;
+  overflow: visible;
+  padding-bottom: 24px;
+}
+
+.needs-pains-split-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 8px;
+}
+
+.subcol-title {
+  margin: 0 0 6px;
+  font-family: 'Prompt', sans-serif;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #0B0B0B;
+}
+
+.dark-mode .subcol-title {
+  color: #16D9B6;
+}
+
+.subcol-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.subcol-list li {
+  font-family: 'Prompt', sans-serif;
+  font-size: 12.8px;
+  line-height: 1.55;
+  color: #333333;
+}
+
+.dark-mode .subcol-list li {
+  color: #D2BAC6;
+}
+
+.persona-cat-decor-bottom {
+  position: absolute;
+  bottom: -10px;
+  right: -6px;
+  z-index: 5;
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.25));
+}
+
+@media (max-width: 1024px) {
+  .persona-layout-card {
+    grid-template-columns: 1fr;
+  }
+  .persona-photo-wrapper {
+    height: 380px;
+    min-height: unset;
+  }
+  .persona-cat-decor-top {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .needs-pains-split-grid {
+    grid-template-columns: 1fr;
+  }
+  .persona-info-column {
+    padding: 20px 16px;
+  }
+}

@@ -1,0 +1,266 @@
+.hero-section {
+  position: relative;
+  background: linear-gradient(180deg, #F098BB 0%, #EE8DB1 40%, #E87DA4 100%);
+  min-height: calc(100vh - 64px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  border-bottom: 2px solid rgba(11, 11, 11, 0.06);
+}
+
+.dark-mode .hero-section {
+  background: linear-gradient(180deg, #24141d 0%, #170d13 50%, #0d070b 100%);
+}
+
+/* Side Lash Packaging Box Imagery matching Image 1 */
+.hero-side-decor {
+  position: absolute;
+  top: 0;
+  bottom: 80px;
+  width: 250px;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.hero-side-decor.left-decor {
+  left: -20px;
+}
+
+.hero-side-decor.right-decor {
+  right: -20px;
+}
+
+.hero-lash-box-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.92;
+  filter: drop-shadow(0 15px 30px rgba(0,0,0,0.18));
+}
+
+.hero-lash-box-img.left-img {
+  transform: rotate(-4deg) scale(1.08);
+}
+
+.hero-lash-box-img.right-img {
+  transform: rotate(4deg) scale(1.08) scaleX(-1);
+}
+
+/* Center Content */
+.hero-center-content {
+  position: relative;
+  z-index: 5;
+  max-width: 820px;
+  margin: 36px auto 20px;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Paradigm Shift Badge */
+.hero-paradigm-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #EF8EB3;
+  border: 1.5px solid #0B0B0B;
+  padding: 6px 22px;
+  border-radius: 9999px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14.5px;
+  font-weight: 600;
+  color: #0B0B0B;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.dark-mode .hero-paradigm-pill {
+  background-color: #381c2b;
+  border-color: #EE6B9D;
+  color: #FFFFFF;
+}
+
+.paradigm-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #16D9B6;
+  box-shadow: 0 0 6px #16D9B6;
+}
+
+/* Main Title */
+.hero-main-title {
+  margin: 0 0 16px;
+  line-height: 0.95;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title-eyelash {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 900;
+  font-size: clamp(48px, 6.2vw, 84px);
+  color: #0B0B0B;
+  letter-spacing: -2.5px;
+}
+
+.dark-mode .title-eyelash {
+  color: #FFFFFF;
+}
+
+.title-reimagined {
+  font-family: 'Playfair Display', 'Alex Brush', serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: clamp(66px, 8.8vw, 120px);
+  color: #16D9B6;
+  letter-spacing: -1.5px;
+  margin-top: -10px;
+  text-shadow: 0 4px 20px rgba(22, 217, 182, 0.3);
+}
+
+/* Description Text in Thai */
+.hero-description {
+  font-family: 'Prompt', sans-serif;
+  font-size: clamp(14px, 1.25vw, 16.5px);
+  font-weight: 400;
+  color: #0B0B0B;
+  line-height: 1.7;
+  margin: 0 0 28px;
+  max-width: 660px;
+}
+
+.dark-mode .hero-description {
+  color: #E2CFD8;
+}
+
+/* Action Buttons */
+.hero-action-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.hero-btn-vr {
+  background-color: #16D9B6;
+  color: #0B0B0B;
+  font-family: 'Prompt', sans-serif;
+  font-weight: 700;
+  font-size: 15.5px;
+  padding: 13px 30px;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(22, 217, 182, 0.35);
+  transition: all 0.22s ease;
+}
+
+.hero-btn-vr:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(22, 217, 182, 0.5);
+  background-color: #1fe9c4;
+}
+
+.hero-btn-quiz {
+  background-color: #EF8EB3;
+  color: #0B0B0B;
+  font-family: 'Prompt', 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 12px 28px;
+  border-radius: 9999px;
+  border: 1.8px solid #0B0B0B;
+  cursor: pointer;
+  transition: all 0.22s ease;
+}
+
+.dark-mode .hero-btn-quiz {
+  background-color: #2b1421;
+  color: #FFFFFF;
+  border-color: #EE6B9D;
+}
+
+.hero-btn-quiz:hover {
+  transform: translateY(-2px);
+  background-color: #f7a2c3;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.dark-mode .hero-btn-quiz:hover {
+  background-color: #401f32;
+}
+
+/* Bottom Stats Bar (4 columns) matching Image 1 */
+.hero-stats-bar {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  background-color: #EE8DB1;
+  border-top: 1.5px solid rgba(11, 11, 11, 0.08);
+  padding: 18px 20px 22px;
+}
+
+.dark-mode .hero-stats-bar {
+  background-color: #150c12;
+  border-top: 1px solid rgba(238, 107, 157, 0.2);
+}
+
+.stats-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  text-align: center;
+}
+
+.stat-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.stat-value {
+  font-family: 'Plus Jakarta Sans', 'Prompt', sans-serif;
+  font-weight: 800;
+  font-size: clamp(24px, 2.5vw, 34px);
+  line-height: 1.1;
+  color: #16D9B6;
+}
+
+.stat-label {
+  font-family: 'Prompt', sans-serif;
+  font-size: clamp(12px, 1vw, 14.5px);
+  font-weight: 500;
+  color: #0B0B0B;
+}
+
+.dark-mode .stat-label {
+  color: #FCE7F0;
+}
+
+@media (max-width: 1024px) {
+  .hero-side-decor {
+    width: 160px;
+    opacity: 0.6;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-side-decor {
+    display: none;
+  }
+  .stats-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 12px;
+  }
+}

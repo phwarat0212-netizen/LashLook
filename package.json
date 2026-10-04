@@ -1,0 +1,14 @@
+{
+  "name": "lashlook-app",
+  "version": "1.0.0",
+  "description": "LashLook Eyelash Extension & Beauty Salon Web Application",
+  "scripts": {
+    "dev": "concurrently \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "start": "concurrently \"npm run start --prefix server\" \"npm run dev --prefix client\"",
+    "client": "npm run dev --prefix client",
+    "server": "npm run dev --prefix server"
+  },
+  "dependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

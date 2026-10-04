@@ -1,0 +1,47 @@
+[
+  {
+    "id": "LL-202610-101",
+    "customerName": "คุณพิมพ์พิชชา วงศ์สวัสดิ์",
+    "phone": "089-123-4567",
+    "serviceId": "manga-anime-wispy",
+    "serviceName": "Manga Anime Wispy (มังงะ ไอดอลเกาหลี)",
+    "stylistId": "stylist-1",
+    "stylistName": "ช่างแพรวา (Praewa)",
+    "date": "2026-10-04",
+    "timeSlot": "11:30",
+    "price": 1390,
+    "status": "confirmed",
+    "note": "ขอต่อเน้นหางตายาวนิดนึงค่ะ มีคอนแทคเลนส์",
+    "createdAt": "2026-10-04T03:49:20.802Z"
+  },
+  {
+    "id": "LL-202610-102",
+    "customerName": "คุณชนิกานต์ เจริญสุข",
+    "phone": "081-987-6543",
+    "serviceId": "classic-natural",
+    "serviceName": "Natural Classic 1:1",
+    "stylistId": "stylist-2",
+    "stylistName": "ช่างมีน (Meen)",
+    "date": "2026-10-04",
+    "timeSlot": "14:30",
+    "price": 990,
+    "status": "pending",
+    "note": "เคยต่อครั้งแรก อยากได้เบาๆ ไม่แต่งหน้าเยอะ",
+    "createdAt": "2026-10-04T06:49:20.802Z"
+  },
+  {
+    "id": "LL-202610-103",
+    "customerName": "คุณณัฐณิชา กิตติคุณ",
+    "phone": "095-442-1189",
+    "serviceId": "foxy-cat-eye",
+    "serviceName": "Foxy Cat Eye Lift",
+    "stylistId": "stylist-3",
+    "stylistName": "ช่างเบลล์ (Belle)",
+    "date": "2026-10-05",
+    "timeSlot": "13:00",
+    "price": 1590,
+    "status": "confirmed",
+    "note": "จะไปงานแต่งสุดสัปดาห์นี้ค่ะ",
+    "createdAt": "2026-10-04T08:49:20.802Z"
+  }
+]

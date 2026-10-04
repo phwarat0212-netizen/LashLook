@@ -1,0 +1,152 @@
+.tryon-page-wrapper {
+  background-color: #EF8EB3;
+  min-height: calc(100vh - 64px);
+  padding: 40px 24px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.25s ease;
+}
+
+.dark-mode .tryon-page-wrapper {
+  background-color: #170d13;
+}
+
+.tryon-studio-card {
+  width: 100%;
+  max-width: 960px;
+  background-color: #0B0B0B;
+  border-radius: 32px;
+  border: 1.5px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.5);
+  padding: 38px 48px 46px;
+  display: flex;
+  flex-direction: column;
+}
+
+.studio-card-header {
+  margin-bottom: 20px;
+}
+
+.studio-card-title {
+  margin: 0 0 8px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 800;
+  font-size: clamp(26px, 3.2vw, 36px);
+  color: #FFFFFF;
+  letter-spacing: -0.5px;
+}
+
+.studio-card-subtitle {
+  margin: 0;
+  font-family: 'Prompt', sans-serif;
+  font-size: clamp(13.5px, 1.2vw, 15.5px);
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.studio-card-divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.14);
+  margin-bottom: 36px;
+}
+
+.studio-card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.studio-logo-container {
+  margin-bottom: 32px;
+  filter: drop-shadow(0 8px 24px rgba(238, 107, 157, 0.3));
+  transition: transform 0.3s ease;
+}
+
+.studio-logo-container:hover {
+  transform: scale(1.02);
+}
+
+.studio-progress-zone {
+  width: 100%;
+  max-width: 620px;
+  margin-bottom: 34px;
+}
+
+.progress-status-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  font-family: 'Prompt', sans-serif;
+  font-size: 14.5px;
+}
+
+.status-label {
+  color: #FFFFFF;
+  font-weight: 500;
+}
+
+.status-percent {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.studio-progress-track {
+  width: 100%;
+  height: 7px;
+  background-color: rgba(255, 255, 255, 0.12);
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.studio-progress-bar {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #EE6B9D 0%, #EF8EB3 45%, #16D9B6 100%);
+  border-radius: 9999px;
+  box-shadow: 0 0 10px rgba(22, 217, 182, 0.5);
+}
+
+.btn-launch-camera {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background-color: #16D9B6;
+  color: #0B0B0B;
+  font-family: 'Prompt', sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  padding: 14px 44px;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 6px 24px rgba(22, 217, 182, 0.4);
+  transition: all 0.22s ease;
+}
+
+.btn-launch-camera:hover {
+  transform: translateY(-2px);
+  background-color: #21efca;
+  box-shadow: 0 8px 30px rgba(22, 217, 182, 0.6);
+}
+
+.camera-icon {
+  stroke-width: 2.2;
+}
+
+@media (max-width: 768px) {
+  .tryon-studio-card {
+    padding: 24px 20px 32px;
+    border-radius: 24px;
+  }
+  .btn-launch-camera {
+    width: 100%;
+    padding: 12px 24px;
+    font-size: 15.5px;
+  }
+}
