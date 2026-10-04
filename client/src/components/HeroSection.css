@@ -1,6 +1,6 @@
 .hero-section {
   position: relative;
-  background: linear-gradient(180deg, #F098BB 0%, #EE8DB1 40%, #E87DA4 100%);
+  background: radial-gradient(ellipse 70% 75% at 50% 45%, #46222C 0%, #7D384D 40%, #D4728E 75%, #EB8BA4 100%);
   min-height: calc(100vh - 64px);
   display: flex;
   flex-direction: column;
@@ -10,42 +10,51 @@
 }
 
 .dark-mode .hero-section {
-  background: linear-gradient(180deg, #24141d 0%, #170d13 50%, #0d070b 100%);
+  background: radial-gradient(ellipse 70% 75% at 50% 45%, #180911 0%, #280E1D 40%, #150A10 75%, #0B0508 100%);
 }
 
-/* Side Lash Packaging Box Imagery matching Image 1 */
+/* Side Lash Packaging Box Imagery matching Image 2 */
 .hero-side-decor {
   position: absolute;
   top: 0;
-  bottom: 80px;
-  width: 250px;
+  bottom: 70px;
+  width: 35vw;
+  max-width: 520px;
+  min-width: 320px;
   pointer-events: none;
-  z-index: 1;
-  overflow: hidden;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  overflow: visible;
 }
 
 .hero-side-decor.left-decor {
-  left: -20px;
+  left: -90px;
+  justify-content: flex-start;
 }
 
 .hero-side-decor.right-decor {
-  right: -20px;
+  right: -90px;
+  justify-content: flex-end;
 }
 
 .hero-lash-box-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  opacity: 0.92;
-  filter: drop-shadow(0 15px 30px rgba(0,0,0,0.18));
+  max-height: 640px;
+  object-fit: contain;
+  opacity: 1;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.35));
 }
 
 .hero-lash-box-img.left-img {
-  transform: rotate(-4deg) scale(1.08);
+  object-position: left center;
+  transform: scale(1.36);
 }
 
 .hero-lash-box-img.right-img {
-  transform: rotate(4deg) scale(1.08) scaleX(-1);
+  object-position: right center;
+  transform: scaleX(-1) scale(1.36);
 }
 
 /* Center Content */
@@ -117,26 +126,28 @@
   font-family: 'Playfair Display', 'Alex Brush', serif;
   font-style: italic;
   font-weight: 700;
-  font-size: clamp(66px, 8.8vw, 120px);
-  color: #16D9B6;
+  font-size: clamp(70px, 9.2vw, 130px);
+  color: #1BD8B7;
   letter-spacing: -1.5px;
   margin-top: -10px;
-  text-shadow: 0 4px 20px rgba(22, 217, 182, 0.3);
+  text-shadow: 0 4px 28px rgba(27, 216, 183, 0.5), 0 0 50px rgba(27, 216, 183, 0.3);
 }
 
 /* Description Text in Thai */
 .hero-description {
   font-family: 'Prompt', sans-serif;
-  font-size: clamp(14px, 1.25vw, 16.5px);
-  font-weight: 400;
-  color: #0B0B0B;
+  font-size: clamp(14.5px, 1.3vw, 17px);
+  font-weight: 500;
+  color: #FFFFFF;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
   line-height: 1.7;
   margin: 0 0 28px;
-  max-width: 660px;
+  max-width: 680px;
 }
 
 .dark-mode .hero-description {
-  color: #E2CFD8;
+  color: #FFFFFF;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
 }
 
 /* Action Buttons */
@@ -150,35 +161,36 @@
 }
 
 .hero-btn-vr {
-  background-color: #16D9B6;
+  background-color: #00E5BC;
   color: #0B0B0B;
   font-family: 'Prompt', sans-serif;
-  font-weight: 700;
+  font-weight: 800;
   font-size: 15.5px;
-  padding: 13px 30px;
+  padding: 13px 32px;
   border-radius: 9999px;
   border: none;
   cursor: pointer;
-  box-shadow: 0 4px 16px rgba(22, 217, 182, 0.35);
+  box-shadow: 0 4px 18px rgba(0, 229, 188, 0.45);
   transition: all 0.22s ease;
 }
 
 .hero-btn-vr:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 22px rgba(22, 217, 182, 0.5);
+  box-shadow: 0 6px 24px rgba(0, 229, 188, 0.6);
   background-color: #1fe9c4;
 }
 
 .hero-btn-quiz {
-  background-color: #EF8EB3;
+  background-color: #EE6B9D;
   color: #0B0B0B;
   font-family: 'Prompt', 'Plus Jakarta Sans', sans-serif;
-  font-weight: 700;
+  font-weight: 800;
   font-size: 15px;
-  padding: 12px 28px;
+  padding: 12px 30px;
   border-radius: 9999px;
-  border: 1.8px solid #0B0B0B;
+  border: 2px solid #0B0B0B;
   cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
   transition: all 0.22s ease;
 }
 
@@ -191,20 +203,20 @@
 .hero-btn-quiz:hover {
   transform: translateY(-2px);
   background-color: #f7a2c3;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
 }
 
 .dark-mode .hero-btn-quiz:hover {
   background-color: #401f32;
 }
 
-/* Bottom Stats Bar (4 columns) matching Image 1 */
+/* Bottom Stats Bar (4 columns) matching Image 2 */
 .hero-stats-bar {
   position: relative;
   z-index: 5;
   width: 100%;
-  background-color: #EE8DB1;
-  border-top: 1.5px solid rgba(11, 11, 11, 0.08);
+  background-color: #E47890;
+  border-top: 1.5px solid rgba(11, 11, 11, 0.12);
   padding: 18px 20px 22px;
 }
 
@@ -231,33 +243,41 @@
 
 .stat-value {
   font-family: 'Plus Jakarta Sans', 'Prompt', sans-serif;
-  font-weight: 800;
-  font-size: clamp(24px, 2.5vw, 34px);
+  font-weight: 900;
+  font-size: clamp(26px, 2.7vw, 38px);
   line-height: 1.1;
-  color: #16D9B6;
+  color: #2BD0B3;
+  letter-spacing: -0.5px;
 }
 
 .stat-label {
   font-family: 'Prompt', sans-serif;
-  font-size: clamp(12px, 1vw, 14.5px);
-  font-weight: 500;
+  font-size: clamp(12.5px, 1.1vw, 15px);
+  font-weight: 600;
   color: #0B0B0B;
 }
 
 .dark-mode .stat-label {
-  color: #FCE7F0;
+  color: #FFFFFF;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1100px) {
   .hero-side-decor {
-    width: 160px;
-    opacity: 0.6;
+    width: 26vw;
+    opacity: 0.85;
   }
 }
 
 @media (max-width: 768px) {
   .hero-side-decor {
-    display: none;
+    width: 140px;
+    opacity: 0.4;
+  }
+  .hero-side-decor.left-decor {
+    left: -70px;
+  }
+  .hero-side-decor.right-decor {
+    right: -70px;
   }
   .stats-container {
     grid-template-columns: repeat(2, 1fr);

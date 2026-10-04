@@ -4,10 +4,10 @@ import './HeroSection.css';
 export default function HeroSection({ onOpenTryOn, onOpenQuiz }) {
   return (
     <section className="hero-section" id="hero">
-      {/* Background Left & Right False Lash Cluster Box Decor */}
+      {/* Background Left & Right False Lash Cluster Box Decor matching Image 2 */}
       <div className="hero-side-decor left-decor">
         <img 
-          src={`${import.meta.env.BASE_URL}images/lash_box_side.jpg`} 
+          src={`${import.meta.env.BASE_URL}images/lash_boxes_stacked.png`} 
           alt="LashLook Packaging Left" 
           className="hero-lash-box-img left-img" 
         />
@@ -15,7 +15,7 @@ export default function HeroSection({ onOpenTryOn, onOpenQuiz }) {
 
       <div className="hero-side-decor right-decor">
         <img 
-          src={`${import.meta.env.BASE_URL}images/lash_box_side.jpg`} 
+          src={`${import.meta.env.BASE_URL}images/lash_boxes_stacked.png`} 
           alt="LashLook Packaging Right" 
           className="hero-lash-box-img right-img" 
         />

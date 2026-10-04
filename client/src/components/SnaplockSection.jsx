@@ -69,7 +69,7 @@ export default function SnaplockSection() {
               <div className="snaplock-visual-wrapper">
                 <div className="snaplock-box-pedestal"></div>
                 <img 
-                  src={`${basePath}images/snaplock_boxes.jpg`} 
+                  src={`${basePath}images/lash_boxes_stacked.png`} 
                   alt="LashLook Snaplock 3 Stacked Acrylic Lash Boxes" 
                   className="snaplock-stacked-boxes-img"
                 />
