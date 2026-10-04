@@ -1,0 +1,229 @@
+/* Snaplock Section Styling */
+.snaplock-full-section {
+  width: 100%;
+  padding: 40px 24px 70px;
+  background-color: var(--bg-pink, #F1A4BA);
+  position: relative;
+  box-sizing: border-box;
+}
+
+.snaplock-container {
+  max-width: 1380px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Distressed Brush Header */
+.snaplock-brush-header {
+  margin-bottom: 24px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.snaplock-brush-banner {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 44px 16px;
+  min-width: 380px;
+  max-width: 650px;
+}
+
+.brush-svg-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.28));
+}
+
+.snaplock-brush-title {
+  position: relative;
+  z-index: 2;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 900;
+  font-size: 38px;
+  letter-spacing: 3px;
+  color: #FFFFFF;
+  margin: 0;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 0px rgba(238, 107, 157, 0.45);
+  user-select: none;
+}
+
+/* Main Card */
+.snaplock-card {
+  width: 100%;
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  border: 2px solid #111111;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.14);
+  padding: 36px 32px;
+  box-sizing: border-box;
+}
+
+/* 3-Column Grid */
+.snaplock-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 28px;
+  align-items: center;
+}
+
+/* Columns */
+.snaplock-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.snaplock-left-col,
+.snaplock-right-col {
+  gap: 22px;
+}
+
+/* Feature Item */
+.snaplock-feature-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.snaplock-feature-title {
+  font-family: 'Prompt', 'Plus Jakarta Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #111111;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.snaplock-feature-desc {
+  font-family: 'Prompt', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #333333;
+  margin: 0;
+  line-height: 1.65;
+  text-align: justify;
+}
+
+.snaplock-feature-desc strong {
+  color: #000000;
+  font-weight: 600;
+}
+
+/* Center Visual Column */
+.snaplock-center-col {
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.snaplock-visual-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.snaplock-box-pedestal {
+  position: absolute;
+  bottom: 12px;
+  width: 86%;
+  height: 50px;
+  background: radial-gradient(ellipse at center, rgba(238, 107, 157, 0.45) 0%, rgba(0,0,0,0.18) 55%, transparent 75%);
+  filter: blur(10px);
+  z-index: 1;
+}
+
+.snaplock-stacked-boxes-img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.18));
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.snaplock-stacked-boxes-img:hover {
+  transform: translateY(-4px) scale(1.02);
+}
+
+/* Dark Mode Support */
+.dark-mode .snaplock-full-section {
+  background-color: #1A1215;
+}
+
+.dark-mode .snaplock-card {
+  background-color: #161616;
+  border-color: rgba(238, 107, 157, 0.35);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode .snaplock-feature-title {
+  color: #FFFFFF;
+}
+
+.dark-mode .snaplock-feature-desc {
+  color: #CCCCCC;
+}
+
+.dark-mode .snaplock-feature-desc strong {
+  color: #FFB3CE;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .snaplock-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .snaplock-center-col {
+    order: -1;
+  }
+
+  .snaplock-visual-wrapper {
+    max-width: 380px;
+  }
+}
+
+@media (max-width: 768px) {
+  .snaplock-full-section {
+    padding: 30px 16px 50px;
+  }
+
+  .snaplock-card {
+    padding: 24px 18px;
+  }
+
+  .snaplock-brush-title {
+    font-size: 26px;
+    letter-spacing: 2px;
+  }
+
+  .snaplock-brush-banner {
+    min-width: 300px;
+    padding: 10px 24px 12px;
+  }
+
+  .snaplock-feature-title {
+    font-size: 15px;
+  }
+
+  .snaplock-feature-desc {
+    font-size: 13.5px;
+  }
+}

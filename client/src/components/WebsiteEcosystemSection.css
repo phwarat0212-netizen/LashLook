@@ -1,0 +1,450 @@
+/* Website Ecosystem Section Styling */
+.eco-full-section {
+  width: 100%;
+  padding: 40px 24px 80px;
+  background-color: var(--bg-pink, #F1A4BA);
+  position: relative;
+  box-sizing: border-box;
+}
+
+.eco-container {
+  max-width: 1380px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Distressed Brush Header */
+.eco-brush-header {
+  margin-bottom: 20px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.eco-brush-banner {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 44px 16px;
+  min-width: 400px;
+  max-width: 680px;
+}
+
+.eco-brush-title {
+  position: relative;
+  z-index: 2;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 900;
+  font-size: 38px;
+  letter-spacing: 3px;
+  color: #FFFFFF;
+  margin: 0;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 0px rgba(238, 107, 157, 0.45);
+  user-select: none;
+}
+
+/* Main Card */
+.eco-card {
+  width: 100%;
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  border: 2px solid #111111;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.14);
+  padding: 24px 32px 36px;
+  box-sizing: border-box;
+}
+
+/* Subtitle at Top Left */
+.eco-card-top-header {
+  margin-bottom: 18px;
+}
+
+.eco-badge-subtitle {
+  font-family: 'Prompt', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #111111;
+  letter-spacing: 0.5px;
+}
+
+/* 3-Column Grid */
+.eco-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 1.25fr 1.05fr;
+  gap: 26px;
+  align-items: center;
+}
+
+/* Columns */
+.eco-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.eco-left-col,
+.eco-right-col {
+  gap: 18px;
+}
+
+/* Feature Item */
+.eco-feature-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.eco-feature-title {
+  font-family: 'Prompt', 'Plus Jakarta Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #111111;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.eco-feature-desc {
+  font-family: 'Prompt', sans-serif;
+  font-size: 13.5px;
+  font-weight: 400;
+  color: #333333;
+  margin: 0;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.eco-feature-desc strong {
+  color: #000000;
+  font-weight: 600;
+}
+
+/* CENTER COLUMN: Website Mockup Frame */
+.eco-center-col {
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.eco-mockup-frame {
+  width: 100%;
+  max-width: 480px;
+  background-color: #F1A4BA;
+  border: 2px solid #111111;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.eco-mockup-frame:hover {
+  transform: translateY(-4px) scale(1.015);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.25);
+}
+
+/* Mockup Topbar */
+.eco-mockup-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  font-family: 'Prompt', sans-serif;
+}
+
+.eco-mockup-logo {
+  display: flex;
+  align-items: center;
+}
+
+.eco-mockup-navlinks {
+  display: flex;
+  gap: 8px;
+  font-size: 9px;
+  font-weight: 600;
+  color: #222;
+}
+
+.eco-mockup-top-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.eco-mockup-search {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 2px 6px;
+  border-radius: 10px;
+  border: 1px solid #111;
+  font-size: 8px;
+  color: #555;
+}
+
+.search-placeholder {
+  font-size: 8px;
+}
+
+.eco-mockup-cart {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: #111;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -4px;
+  right: -5px;
+  background: #E53935;
+  color: #FFF;
+  font-size: 7px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* Mockup Hero Stage */
+.eco-mockup-hero {
+  position: relative;
+  padding: 22px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 230px;
+  overflow: hidden;
+}
+
+.mockup-side-box {
+  position: absolute;
+  width: 90px;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+  z-index: 1;
+  opacity: 0.9;
+}
+
+.mockup-left-box {
+  left: -20px;
+  top: 30%;
+  transform: rotate(-15deg);
+}
+
+.mockup-right-box {
+  right: -20px;
+  top: 30%;
+  transform: rotate(15deg);
+}
+
+.mockup-hero-body {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 320px;
+}
+
+.mockup-pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: #0B0B0B;
+  color: #FFFFFF;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+.mockup-pill-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #00E5FF;
+}
+
+.mockup-hero-heading {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 900;
+  color: #111111;
+  margin: 0 0 6px 0;
+  line-height: 1.15;
+}
+
+.mockup-cursive {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 700;
+  color: #1DE9B6;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.mockup-hero-sub {
+  font-family: 'Prompt', sans-serif;
+  font-size: 9px;
+  color: #333333;
+  margin: 0 0 12px 0;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.mockup-hero-cta-row {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  width: 100%;
+}
+
+.mockup-cta-green {
+  background: #00BFA5;
+  color: #FFFFFF;
+  font-family: 'Prompt', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  padding: 6px 10px;
+  border: 1px solid #111;
+  border-radius: 16px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.mockup-cta-pink {
+  background: #EE6B9D;
+  color: #FFFFFF;
+  font-family: 'Prompt', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  padding: 6px 10px;
+  border: 1px solid #111;
+  border-radius: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+/* Mockup Bottom Stats */
+.eco-mockup-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: rgba(255, 255, 255, 0.5);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 6px 4px;
+}
+
+.mockup-stat-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2px;
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.mockup-stat-cell:last-child {
+  border-right: none;
+}
+
+.mockup-stat-cell strong {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 9px;
+  font-weight: 800;
+  color: #111111;
+}
+
+.mockup-stat-cell span {
+  font-family: 'Prompt', sans-serif;
+  font-size: 6.5px;
+  color: #444444;
+  line-height: 1.2;
+}
+
+/* Dark Mode Support */
+.dark-mode .eco-full-section {
+  background-color: #1A1215;
+}
+
+.dark-mode .eco-card {
+  background-color: #161616;
+  border-color: rgba(238, 107, 157, 0.35);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode .eco-badge-subtitle {
+  color: #FFFFFF;
+}
+
+.dark-mode .eco-feature-title {
+  color: #FFFFFF;
+}
+
+.dark-mode .eco-feature-desc {
+  color: #CCCCCC;
+}
+
+.dark-mode .eco-feature-desc strong {
+  color: #FFB3CE;
+}
+
+/* Responsive */
+@media (max-width: 1180px) {
+  .eco-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .eco-center-col {
+    order: -1;
+  }
+
+  .eco-mockup-frame {
+    max-width: 440px;
+  }
+}
+
+@media (max-width: 768px) {
+  .eco-full-section {
+    padding: 30px 16px 50px;
+  }
+
+  .eco-card {
+    padding: 20px 16px;
+  }
+
+  .eco-brush-title {
+    font-size: 24px;
+    letter-spacing: 2px;
+  }
+
+  .eco-brush-banner {
+    min-width: 300px;
+    padding: 10px 24px 12px;
+  }
+
+  .eco-feature-title {
+    font-size: 14.5px;
+  }
+
+  .eco-feature-desc {
+    font-size: 13px;
+  }
+}

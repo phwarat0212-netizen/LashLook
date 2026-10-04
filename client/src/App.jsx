@@ -6,6 +6,8 @@ import SignificanceSection from './components/SignificanceSection';
 import SurveySection from './components/SurveySection';
 import PersonaSection from './components/PersonaSection';
 import VPCSection from './components/VPCSection';
+import SnaplockSection from './components/SnaplockSection';
+import WebsiteEcosystemSection from './components/WebsiteEcosystemSection';
 import SmartQuizModal from './components/SmartQuizModal';
 import CameraScanner from './components/CameraScanner';
 import './App.css';
@@ -73,6 +75,13 @@ export default function App() {
             <PersonaSection />
 
             <VPCSection />
+
+            <SnaplockSection />
+
+            <WebsiteEcosystemSection 
+              onOpenTryOn={() => handleSelectSection('tryon')}
+              onOpenQuiz={() => setIsQuizOpen(true)}
+            />
           </main>
 
           <SmartQuizModal 

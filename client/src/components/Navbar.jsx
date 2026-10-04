@@ -17,6 +17,8 @@ export default function Navbar({
     { id: 'survey', label: 'ผลสำรวจข้อมูล' },
     { id: 'persona', label: 'Persona' },
     { id: 'vpc', label: 'VPC' },
+    { id: 'snaplock', label: 'Snaplock' },
+    { id: 'website', label: 'ระบบเว็บไซต์' },
   ];
 
   const handleItemClick = (item) => {
