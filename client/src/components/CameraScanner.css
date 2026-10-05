@@ -76,11 +76,29 @@
   border: 1px solid rgba(238, 176, 199, 0.2);
 }
 
-.brand-logo-text {
-  font-size: 1.1rem;
-  font-weight: 800;
-  letter-spacing: -0.01em;
-  color: #FFFFFF;
+.camera-brand-logo-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.camera-brand-logo-img {
+  height: 24px;
+  width: auto;
+  display: block;
+  filter: brightness(0) invert(1);
+}
+
+.camera-ar-pill {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  color: #16D9B6;
+  background: rgba(22, 217, 182, 0.15);
+  border: 1px solid #16D9B6;
+  padding: 1px 6px;
+  border-radius: 4px;
 }
 
 .status-pill {

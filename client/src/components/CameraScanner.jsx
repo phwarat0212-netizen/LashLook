@@ -956,9 +956,14 @@ export default function CameraScanner({ onClose, initialStyleId = 'style1' }) {
                 <span className="hud-btn-txt">กลับหน้าหลัก</span>
               </button>
             )}
-            <span className="brand-logo-text">
-              Lash<span className="text-hot-pink">Look</span> <span className="text-turquoise">AR</span>
-            </span>
+            <div className="camera-brand-logo-wrap">
+              <img 
+                src={`${BASE_PATH}images/logo_horizontal.png`} 
+                alt="LashLook Logo" 
+                className="camera-brand-logo-img" 
+              />
+              <span className="camera-ar-pill">AR</span>
+            </div>
             <div className={`status-pill ${isFaceDetected ? 'status-locked' : 'status-searching'}`}>
               <span className="status-dot"></span>
               <span>{isFaceDetected ? 'AI EYE TRACKING' : 'SEARCHING FACE...'}</span>

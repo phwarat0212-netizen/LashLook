@@ -1,0 +1,31 @@
+/* LashLook Brand Logo Styles */
+.lashlook-logo-horizontal {
+  user-select: none;
+  cursor: pointer;
+}
+
+.lashlook-logo-horizontal-img {
+  transition: filter 0.25s ease, transform 0.2s ease;
+}
+
+.lashlook-logo-horizontal:hover .lashlook-logo-horizontal-img {
+  transform: scale(1.03);
+}
+
+/* In Dark Mode, invert black logo to crisp white */
+.dark-mode .lashlook-logo-horizontal-img {
+  filter: brightness(0) invert(1);
+}
+
+.lashlook-logo-stacked {
+  user-select: none;
+}
+
+.lashlook-logo-stacked-img {
+  filter: drop-shadow(0 10px 28px rgba(238, 107, 157, 0.45));
+  transition: transform 0.3s ease;
+}
+
+.lashlook-logo-stacked:hover .lashlook-logo-stacked-img {
+  transform: scale(1.025);
+}
