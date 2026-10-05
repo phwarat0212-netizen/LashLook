@@ -46,7 +46,7 @@ function SurveyCarouselBlock({ title, cards }) {
                     </div>
                     <div className="survey-chart-info-box">
                       <div className="card-top-row">
-                        <span className="card-badge badge-p1-form">{card.badge}</span>
+                        <span className={`card-badge ${card.badgeColor || 'badge-p1-form'}`}>{card.badge}</span>
                         <span className="card-stat text-turquoise">{card.stat}</span>
                       </div>
                       <h4 className="card-item-title">{card.title}</h4>
@@ -167,63 +167,57 @@ export default function SurveySection() {
     {
       partNumber: 2,
       group: 'p1_2',
-      title: '• ส่วนที่ 2: พฤติกรรมการใช้งานและประสบการณ์เกี่ยวกับขนตาแบบช่อมีกาวในตัว',
+      title: '• ส่วนที่ 2: พฤติกรรมการใช้งานและประสบการณ์เกี่ยวกับขนตาแบบช่อมีกาวในตัว (153 คำตอบ)',
       cards: [
         {
           id: '2-1',
-          title: 'ปัญหาอันดับ 1: กาวติดนิ้วแต่ไม่ติดตา',
-          badge: 'Pain Point',
-          badgeColor: 'badge-p2',
-          stat: '78.4%',
-          statLabel: 'กาวเหนียวติดแหนบ/หลุดง่าย',
-          detail: 'แถบกาวเดิมไม่ทนเหงื่อ หลุดระหว่างวัน หรือกาวติดแน่นที่แหนบจนช่อขนตาเสียทรง',
-          chart: [
-            { label: 'กาวติดแหนบ/มือ', val: 78, color: '#EE6B9D' },
-            { label: 'หลุดระหว่างวัน', val: 68, color: '#16D9B6' },
-            { label: 'กาวเหนียวค้างตา', val: 45, color: '#EF8EB3' }
-          ]
+          title: 'อิทธิพลในการตัดสินใจทดลองใช้ (Who)',
+          badge: 'บุคคล/คอนเทนต์ (Who)',
+          badgeColor: 'badge-p2-form',
+          stat: '83.0%',
+          statLabel: 'เพื่อน/คนสนิท 83% & สนใจส่วนตัว 83%',
+          detail: 'ได้รับอิทธิพลจากเพื่อน คนสนิท (83%) ความสนใจส่วนตัว (83%) คลิป Before-After จากผู้ใช้จริง (82.4%) และอินฟลูเอนเซอร์ (79.7%)',
+          image: `${basePath}images/survey/survey_p2_influence_who.png`
         },
         {
           id: '2-2',
-          title: 'ปัญหาความสมมาตรและการวางตำแหน่ง',
-          badge: 'Usability',
-          badgeColor: 'badge-p2',
-          stat: '64.5%',
-          statLabel: 'ติดเบี้ยวและเสียเวลานาน',
-          detail: 'ผู้ใช้ต้องดึงออกแล้วติดใหม่เฉลี่ย 3-4 ครั้งต่อข้าง ทำให้เสียเวลาแต่งหน้าตอนเช้า',
-          chart: [
-            { label: 'ติดเบี้ยว/ไม่เท่ากัน', val: 65, color: '#16D9B6' },
-            { label: 'เสียเวลา > 15 นาที', val: 60, color: '#EE6B9D' },
-            { label: 'ดึงออกจนตาเจ็บ', val: 41, color: '#EF8EB3' }
-          ]
+          title: 'ช่องทาง/แพลตฟอร์มที่พบเห็น (Where)',
+          badge: 'ช่องทาง (Platform)',
+          badgeColor: 'badge-p2-form',
+          stat: '100%',
+          statLabel: 'TikTok 100% (153 คนเต็ม!)',
+          detail: 'TikTok เข้าถึงกลุ่มเป้าหมายได้ 100% รองลงมาคือ Instagram 85%, Shopee/อีคอมเมิร์ซ 79.7% และหน้าร้านค้าออฟไลน์ 73.9%',
+          image: `${basePath}images/survey/survey_p2_platform_where.png`
         },
         {
           id: '2-3',
-          title: 'รูปแบบการใช้งานหลักในแต่ละวัน',
-          badge: 'Behavior',
-          badgeColor: 'badge-p2',
-          stat: '82.0%',
-          statLabel: 'แต่งหน้าตอนเช้าในเวลาเร่งด่วน',
-          detail: 'ต้องการช่อขนตาที่พร้อมใช้งานทันที หยิบปุ๊บติดปั๊บเสร็จในเวลาไม่เกิน 3-5 นาที',
-          chart: [
-            { label: 'ชั่วโมงเร่งด่วนเช้า', val: 82, color: '#EE6B9D' },
-            { label: 'ก่อนออกไปถ่ายคลิป', val: 64, color: '#16D9B6' },
-            { label: 'เติมระหว่างวัน', val: 28, color: '#EF8EB3' }
-          ]
+          title: 'ประสบการณ์การใช้ขนตาปลอมประเภทอื่น',
+          badge: 'ประสบการณ์เดิม (Experience)',
+          badgeColor: 'badge-p2-form',
+          stat: '86.3%',
+          statLabel: 'ขนตาปลอมแบบแถบ 86.3%',
+          detail: 'เคยใช้ขนตาแบบแถบ 86.3%, ขนตาแบบช่อทากาว 58.8%, ขนตาแม่เหล็ก 51.6% และเคยต่อขนตาที่ร้าน 47.7% (ไม่เคยใช้เพียง 2.6%)',
+          image: `${basePath}images/survey/survey_p2_prior_experience.png`
         },
         {
           id: '2-4',
-          title: 'การแกะออกและทิ้งคราบกาว',
-          badge: 'Removal',
-          badgeColor: 'badge-p2',
-          stat: '71.2%',
-          statLabel: 'ไม่ชอบคราบกาวที่ล้างยาก',
-          detail: 'ต้องการแถบกาวที่ดึงออกง่ายโดยไม่ทำให้เจ็บเปลือกตาและไม่ทิ้งคราบเหนียวตกค้าง',
-          chart: [
-            { label: 'ทิ้งคราบเหนียว', val: 71, color: '#EE6B9D' },
-            { label: 'เจ็บตอนดึงออก', val: 58, color: '#16D9B6' },
-            { label: 'ขนตาจริงหลุด', val: 36, color: '#EF8EB3' }
-          ]
+          title: 'โอกาสในการใช้งานมากที่สุด (When)',
+          badge: 'โอกาสการใช้งาน (When)',
+          badgeColor: 'badge-p2-form',
+          stat: '45.8%',
+          statLabel: 'แต่งหน้าในชีวิตประจำวัน 45.8%',
+          detail: 'นิยมใช้แต่งหน้าในชีวิตประจำวัน 45.8%, ไปเที่ยว/ถ่ายรูป 28.1% และงานปาร์ตี้/สังสรรค์ 11.8%',
+          image: `${basePath}images/survey/survey_p2_occasion_when.png`
+        },
+        {
+          id: '2-5',
+          title: 'ความถี่ในการใช้งานขนตาแบบช่อมีกาวในตัว',
+          badge: 'ความถี่ (Frequency)',
+          badgeColor: 'badge-p2-form',
+          stat: '42.5%',
+          statLabel: '1–3 ครั้งต่อสัปดาห์ (42.5%)',
+          detail: 'ความถี่การใช้งานหลักคือ 1–3 ครั้ง/สัปดาห์ (42.5%) และ 1–3 ครั้ง/เดือน (32.7%) โดยมีผู้ใช้ทุกวันและ 4-6 ครั้ง/สัปดาห์รวม 14.8%',
+          image: `${basePath}images/survey/survey_p2_frequency.png`
         }
       ]
     },

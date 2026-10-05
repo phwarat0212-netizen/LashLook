@@ -258,6 +258,11 @@
   color: #92400E;
 }
 
+.card-badge.badge-p2-form {
+  background-color: #FCE7F3;
+  color: #9D174D;
+}
+
 .dark-mode .card-badge {
   background-color: rgba(22, 217, 182, 0.15);
   color: #16D9B6;
@@ -271,6 +276,11 @@
 .dark-mode .card-badge.badge-p1-form {
   background-color: rgba(245, 158, 11, 0.2);
   color: #FBBF24;
+}
+
+.dark-mode .card-badge.badge-p2-form {
+  background-color: rgba(236, 72, 153, 0.2);
+  color: #F472B6;
 }
 
 .card-stat {
