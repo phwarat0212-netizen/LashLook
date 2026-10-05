@@ -36,6 +36,10 @@ export function BlackCatPeeking({ style = {} }) {
 }
 
 export default function PersonaSection() {
+  const basePath = import.meta.env.BASE_URL.endsWith('/') 
+    ? import.meta.env.BASE_URL 
+    : `${import.meta.env.BASE_URL}/`;
+
   return (
     <section className="persona-full-section" id="persona">
       <div className="persona-container animate-fade-in">
@@ -44,14 +48,18 @@ export default function PersonaSection() {
           <div className="persona-visual-column">
             <div className="persona-photo-wrapper">
               <img 
-                src={`${import.meta.env.BASE_URL}images/persona_girls.jpg`} 
-                alt="Target Persona Fashion Gen Z" 
+                src={`${basePath}images/persona_meangirls.png`} 
+                alt="Target Persona Mean Girls" 
                 className="persona-main-img" 
               />
               
               {/* Cat Silhouette sitting on the right edge */}
               <div className="persona-cat-decor-top">
-                <BlackCatPeeking />
+                <img 
+                  src={`${basePath}images/persona_cat.png`} 
+                  alt="Cute Black Cat Sitting" 
+                  className="persona-cat-img-top" 
+                />
               </div>
 
               {/* Distressed Black Brush Title Overlay matching Image 4 */}

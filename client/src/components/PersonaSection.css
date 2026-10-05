@@ -39,7 +39,7 @@
 /* Visual Column (Left) */
 .persona-visual-column {
   position: relative;
-  background-color: #F8D2E1;
+  background: radial-gradient(circle at 50% 40%, #FFD6E5 0%, #F5B9CF 60%, #EEA0BC 100%);
   overflow: hidden;
   display: flex;
 }
@@ -49,22 +49,37 @@
   width: 100%;
   height: 100%;
   min-height: 600px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
 
 .persona-main-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: top center;
+  object-position: 50% 10%;
   display: block;
+  filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.15));
 }
 
 .persona-cat-decor-top {
   position: absolute;
-  top: 100px;
-  right: -8px;
+  top: 25px;
+  right: 5px;
   z-index: 5;
-  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.3));
+}
+
+.persona-cat-img-top {
+  width: 85px;
+  height: auto;
+  display: block;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.persona-cat-img-top:hover {
+  transform: rotate(-6deg) scale(1.08);
 }
 
 /* Distressed Brush Title Overlay */
