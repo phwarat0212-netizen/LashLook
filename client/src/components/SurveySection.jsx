@@ -34,31 +34,54 @@ function SurveyCarouselBlock({ title, cards }) {
             style={{ transform: `translateX(-${currentIndex * (100 / 3)}%)` }}
           >
             {cards.map((card) => (
-              <div className="survey-card-item" key={card.id}>
-                <div className="card-top-row">
-                  <span className={`card-badge ${card.badgeColor ? card.badgeColor : ''}`}>{card.badge}</span>
-                  <span className="card-stat text-turquoise">{card.stat}</span>
-                </div>
-                <h4 className="card-item-title">{card.title}</h4>
-                <p className="card-item-stat-label">{card.statLabel}</p>
-                
-                {/* Mini Bar Chart */}
-                <div className="card-bars-group">
-                  {card.chart.map((c, i) => (
-                    <div className="chart-bar-row" key={i}>
-                      <span className="bar-name">{c.label}</span>
-                      <div className="bar-track">
-                        <div 
-                          className="bar-fill" 
-                          style={{ width: `${c.val}%`, backgroundColor: c.color }}
-                        ></div>
-                      </div>
-                      <span className="bar-pct">{c.val}%</span>
+              <div className={`survey-card-item ${card.image ? 'survey-card-with-chart' : ''}`} key={card.id}>
+                {card.image ? (
+                  <div className="survey-form-chart-card">
+                    <div className="survey-chart-img-frame">
+                      <img 
+                        src={card.image} 
+                        alt={card.title} 
+                        className="survey-form-pie-img" 
+                      />
                     </div>
-                  ))}
-                </div>
+                    <div className="survey-chart-info-box">
+                      <div className="card-top-row">
+                        <span className="card-badge badge-p1-form">{card.badge}</span>
+                        <span className="card-stat text-turquoise">{card.stat}</span>
+                      </div>
+                      <h4 className="card-item-title">{card.title}</h4>
+                      <p className="card-item-stat-label">{card.statLabel}</p>
+                      <p className="card-item-detail">{card.detail}</p>
+                    </div>
+                  </div>
+                ) : (
+                  <>
+                    <div className="card-top-row">
+                      <span className={`card-badge ${card.badgeColor ? card.badgeColor : ''}`}>{card.badge}</span>
+                      <span className="card-stat text-turquoise">{card.stat}</span>
+                    </div>
+                    <h4 className="card-item-title">{card.title}</h4>
+                    <p className="card-item-stat-label">{card.statLabel}</p>
+                    
+                    {/* Mini Bar Chart */}
+                    <div className="card-bars-group">
+                      {card.chart && card.chart.map((c, i) => (
+                        <div className="chart-bar-row" key={i}>
+                          <span className="bar-name">{c.label}</span>
+                          <div className="bar-track">
+                            <div 
+                              className="bar-fill" 
+                              style={{ width: `${c.val}%`, backgroundColor: c.color }}
+                            ></div>
+                          </div>
+                          <span className="bar-pct">{c.val}%</span>
+                        </div>
+                      ))}
+                    </div>
 
-                <p className="card-item-detail">{card.detail}</p>
+                    <p className="card-item-detail">{card.detail}</p>
+                  </>
+                )}
               </div>
             ))}
           </div>
@@ -80,65 +103,62 @@ function SurveyCarouselBlock({ title, cards }) {
 export default function SurveySection() {
   const [activeGroup, setActiveGroup] = useState('all'); // 'all', 'p1_2', 'p3_5', 'p6_8'
 
+  const basePath = import.meta.env.BASE_URL.endsWith('/') 
+    ? import.meta.env.BASE_URL 
+    : `${import.meta.env.BASE_URL}/`;
+
   // 8 PARTS DATA
   const allParts = [
     // PART 1
     {
       partNumber: 1,
       group: 'p1_2',
-      title: '• ส่วนที่ 1 ข้อมูลทั่วไปของผู้ตอบแบบสอบถาม',
+      title: '• ส่วนที่ 1: ข้อมูลทั่วไปของผู้ตอบแบบสอบถาม (165 คำตอบ)',
       cards: [
         {
           id: '1-1',
-          title: 'กลุ่มช่วงอายุของผู้ตอบแบบสอบถาม',
-          badge: 'Demographics',
-          stat: '84.2%',
-          statLabel: 'Gen Z & First Jobber (18-28 ปี)',
-          detail: 'กลุ่มเป้าหมายหลักที่ให้ความสำคัญกับการแต่งตาและติดตามเทรนด์บิวตี้อย่างต่อเนื่อง',
-          chart: [
-            { label: '18-24 ปี', val: 62, color: '#EE6B9D' },
-            { label: '25-34 ปี', val: 28, color: '#16D9B6' },
-            { label: '35 ปีขึ้นไป', val: 10, color: '#EF8EB3' }
-          ]
+          title: 'เพศของผู้ตอบแบบสอบถาม',
+          badge: 'เพศ (Gender)',
+          stat: '79.4%',
+          statLabel: 'ผู้หญิง 79.4% | LGBTQ+ 15.8%',
+          detail: 'กลุ่มเป้าหมายหลักคือผู้หญิงและ LGBTQ+ รวมกว่า 95.2% ที่แต่งหน้าและให้ความสนใจขนตาเป็นพิเศษ',
+          image: `${basePath}images/survey/survey_p1_gender.png`
         },
         {
           id: '1-2',
-          title: 'อาชีพและไลฟ์สไตล์ผู้ใช้งาน',
-          badge: 'Occupation',
-          stat: '56.8%',
-          statLabel: 'นักศึกษา & คอนเทนต์ครีเอเตอร์',
-          detail: 'ต้องการความสวยเร่งด่วนสำหรับการถ่ายภาพ ทำคลิป และชีวิตประจำวันในรั้วมหาวิทยาลัย',
-          chart: [
-            { label: 'นักเรียน/นศ.', val: 56, color: '#16D9B6' },
-            { label: 'พนักงานเอกชน', val: 32, color: '#EE6B9D' },
-            { label: 'ฟรีแลนซ์/ธุรกิจ', val: 12, color: '#EF8EB3' }
-          ]
+          title: 'ช่วงอายุของผู้ตอบแบบสอบถาม',
+          badge: 'ช่วงอายุ (Age)',
+          stat: '80.0%',
+          statLabel: 'กลุ่มอายุ 16–20 ปี (80%)',
+          detail: 'ผู้ตอบแบบสอบถามส่วนใหญ่อยู่ในวัยเรียนตอนปลาย (16–20 ปี) 80% และวัยทำงานตอนต้น (21–30 ปี) 14.5%',
+          image: `${basePath}images/survey/survey_p1_age.png`
         },
         {
           id: '1-3',
-          title: 'ความถี่ในการติดขนตาปลอม',
-          badge: 'Frequency',
-          stat: '48.5%',
-          statLabel: 'ติด 3-5 วันต่อสัปดาห์ขึ้นไป',
-          detail: 'พฤติกรรมผู้บริโภคเปลี่ยนจากติดเฉพาะออกงาน สู่การติดขนตาในชีวิตประจำวัน (Daily Look)',
-          chart: [
-            { label: 'เกือบทุกวัน', val: 48, color: '#EE6B9D' },
-            { label: 'สัปดาห์ละ 1-2 ครั้ง', val: 36, color: '#16D9B6' },
-            { label: 'เฉพาะออกงาน', val: 16, color: '#EF8EB3' }
-          ]
+          title: 'อาชีพของผู้ตอบแบบสอบถาม',
+          badge: 'อาชีพ (Occupation)',
+          stat: '88.5%',
+          statLabel: 'นักเรียน/นักศึกษา 146 คน (88.5%)',
+          detail: 'กลุ่มผู้ใช้งานหลักคือกลุ่มนักเรียนและนักศึกษาที่ชื่นชอบความสะดวก รวดเร็ว และติดง่ายในชีวิตประจำวัน',
+          image: `${basePath}images/survey/survey_p1_career.png`
         },
         {
           id: '1-4',
-          title: 'งบประมาณเฉลี่ยต่อเดือนสำหรับขนตา',
-          badge: 'Budget',
-          stat: '350-800฿',
-          statLabel: 'งบใช้จ่ายซื้อขนตาเฉลี่ยต่อคน/เดือน',
-          detail: 'ยินดีจ่ายเพิ่มขึ้นหากผลิตภัณฑ์ช่วยประหยัดเวลาและสามารถนำกลับมาใช้ซ้ำได้',
-          chart: [
-            { label: '300-500 บาท', val: 52, color: '#16D9B6' },
-            { label: '500-1,000 บาท', val: 34, color: '#EE6B9D' },
-            { label: '1,000+ บาท', val: 14, color: '#EF8EB3' }
-          ]
+          title: 'รายได้เฉลี่ยต่อเดือน',
+          badge: 'รายได้ (Income)',
+          stat: '43.0%',
+          statLabel: 'ต่ำกว่า 10,000 บาท (43%)',
+          detail: 'กลุ่มรายได้ต่ำกว่า 10,000 บาท 43% และช่วง 10,000–20,000 บาท 24.8% เน้นความคุ้มค่าและนำกลับมาใช้ซ้ำได้',
+          image: `${basePath}images/survey/survey_p1_income.png`
+        },
+        {
+          id: '1-5',
+          title: 'ประสบการณ์ใช้ขนตาแบบช่อมีกาวในตัว',
+          badge: 'พฤติกรรม (Experience)',
+          stat: '43.6%',
+          statLabel: 'เคยใช้ 43.6% | ไม่เคยใช้ 38.8%',
+          detail: 'ผู้บริโภค 43.6% มีประสบการณ์ใช้ขนตาแถบกาวในตัว และอีก 38.8% สนใจลองใช้เพราะต้องการความสะดวกรวดเร็ว',
+          image: `${basePath}images/survey/survey_p1_experience.png`
         }
       ]
     },
